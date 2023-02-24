@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Homewrk10 {
     /*1. დაწერეთ ფუნქცია, რომელიც დააბრუნებს
     გადაცემული სიტყვა პალინდრომია თუ არა.
@@ -33,7 +35,13 @@ public class Homewrk10 {
         } else {
             System.out.println(str1 + " ar aris palindromi");
         }
-
+        char char1[] = {'a','b','c','d'};
+        char char2[] = {'z','h','t'};
+        if (isAnagrame(char1,char2)){
+            System.out.println("Arian anagramebi");
+        } else {
+            System.out.println(Arrays.toString(char1) + " da " + Arrays.toString(char2) + " Ar arian ertmanetis anagramebi");
+        }
 
 
     }
@@ -51,4 +59,21 @@ public class Homewrk10 {
         }
         return true;
     }
+
+    //---ანაგრამი---//
+    private static boolean isAnagrame(char[] char1, char[] char2){
+        int a = char1.length;
+        int b = char2.length;
+        if (char1 != char2){
+            return false;
+        }
+        Arrays.sort(char1);
+        Arrays.sort(char2);
+        for (int n = 0; n < a; n++){
+            if (char1[n] != char2[n])
+                return false;
+        }
+        return true;
+    }
+
 }
