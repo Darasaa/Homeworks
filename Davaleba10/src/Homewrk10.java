@@ -40,7 +40,7 @@ public class Homewrk10 {
         if (isAnagrame(char1,char2)){
             System.out.println("Arian anagramebi");
         } else {
-            System.out.println(Arrays.toString(char1) + " da " + Arrays.toString(char2) + " Ar arian ertmanetis anagramebi");
+            System.out.println(Arrays.toString(char1) + "  da " + Arrays.toString(char2) + " Ar arian ertmanetis anagramebi");
         }
 
 
