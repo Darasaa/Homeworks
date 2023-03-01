@@ -87,10 +87,10 @@ public class Hmwrk11 {
         System.out.println(" ჩაწერე ინგლისური ანბანის 1 ასო");
         String input = scanner.nextLine();
 
-        if(input.length() != 1){
+        if(input.length() != -1){
             System.out.println(" შემოიყვანე არაუმეტეს 1 ასო ");
         }
-        char c = input.charAt(0);
+        char c = input.charAt(1);
         int index = getAlphabetIndex(c);
         if (index == -1){
             System.out.println(c + " არ არის ინგლისურ ანბანში");
