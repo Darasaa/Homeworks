@@ -87,19 +87,17 @@ public class Hmwrk11 {
         System.out.println(" ჩაწერე ინგლისური ანბანის 1 ასო");
         String input = scanner.nextLine();
 
-        while (true) {
-            if (input.length() != 1) {
-                System.out.println(" შემოიყვანე არაუმეტეს 1 ასო ");
-            }
-            char c = input.charAt(0);
-            int index = getAlphabetIndex(c);
-            if (index == -1) {
-                System.out.println(c + " არ არის ინგლისურ ანბანში");
-            } else {
-                System.out.println(c + " ინგლისურ ანბანში არის " + index + " ადგილზე ");
-            }
-            return (char) index;
+        if(input.length() != 1){
+            System.out.println(" შემოიყვანე არაუმეტეს 1 ასო ");
         }
+        char c = input.charAt(0);
+        int index = getAlphabetIndex(c);
+        if (index == -1){
+            System.out.println(c + " არ არის ინგლისურ ანბანში");
+        } else {
+            System.out.println(c + " ინგლისურ ანბანში არის " + index + " ადგილზე ");
+        }
+        return (char) index;
 
     }
 
