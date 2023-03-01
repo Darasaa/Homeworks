@@ -31,8 +31,9 @@ import java.util.Scanner;
 
 public class Hmwrk11 {
     public static void main(String[] args) {
-        capitalsOfCountries();
-        bigAndSmall();
+//        capitalsOfCountries();
+//        bigAndSmall();
+        getAlphabetIndex((indexOfCh()));
     }
 
     private static void capitalsOfCountries() {
@@ -79,5 +80,35 @@ public class Hmwrk11 {
             if (aso.equals("#"))
                 break;
         }
+    }
+
+    private static char indexOfCh(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" ჩაწერე ინგლისური ანბანის 1 ასო");
+        String input = scanner.nextLine();
+
+        while (true) {
+            if (input.length() != 1) {
+                System.out.println(" შემოიყვანე არაუმეტეს 1 ასო ");
+            }
+            char c = input.charAt(0);
+            int index = getAlphabetIndex(c);
+            if (index == -1) {
+                System.out.println(c + " არ არის ინგლისურ ანბანში");
+            } else {
+                System.out.println(c + " ინგლისურ ანბანში არის " + index + " ადგილზე ");
+            }
+            return (char) index;
+        }
+
+    }
+
+    private static int getAlphabetIndex(Character c){
+        c = Character.toLowerCase(c);
+        if (c < 'a' || c > 'z'){
+            return -1;
+        }
+        int index = c - 'a';
+        return index;
     }
 }
