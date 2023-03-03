@@ -19,9 +19,11 @@
     შეიყვანოთ (როგორც წინა ამოცანაში).
  */
 
+import java.util.Arrays;
+
 public class Hmwrk12 {
     public static void main(String[] args) {
-
+    secondBiggest();
     }
 
     private static void secondBiggest(){
@@ -37,7 +39,8 @@ public class Hmwrk12 {
 
          }
      }
-
+        System.out.println(Arrays.toString(arr));
+        System.out.println("მეორე უდიდესი მასივში არის: " + secondLargest);
     }
 
 }
