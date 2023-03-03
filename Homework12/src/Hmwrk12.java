@@ -25,15 +25,19 @@ public class Hmwrk12 {
     }
 
     private static void secondBiggest(){
-       int largest = 0;
-       int secondLargest = 0;
-       int[] arr = {6,5,2,7,19,20,44};
-       for (int i = 0; i < arr.length; i++){
-           if (arr[i] > largest){
-               secondLargest = largest;
-               largest = arr[i];
-           }
-       }
+     int largest = 0;
+     int secondLargest = 0;
+     int[] arr = {4,7,5,13,22,68,92};
+     for (int i = 0; i < arr.length; i++){
+         if (arr[i] > largest){
+             secondLargest = largest;
+             largest = arr[i];
+         } else if (arr[i] > secondLargest) {
+             secondLargest = arr[i];
+
+         }
+     }
+
     }
 
 }
